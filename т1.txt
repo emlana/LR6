@@ -1,0 +1,334 @@
+Windows PowerShell
+(C) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Установите последнюю версию PowerShell для новых функций и улучшения! https://aka.ms/PSWindows
+
+PS C:\Users\ADMIN\Desktop\уч\оп> git clone https://github.com/emlana/LR6
+Cloning into 'LR6'...
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 14 (delta 0), reused 1 (delta 0), pack-reused 13
+Receiving objects: 100% (14/14), done.
+PS C:\Users\ADMIN\Desktop\уч\оп> git config user.name "4116 Спицина С.В."
+fatal: not in a git directory
+PS C:\Users\ADMIN\Desktop\уч\оп> git log --all
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\ADMIN\Desktop\уч\оп> .cd LR6
+.cd : Имя ".cd" не распознано как имя командлета, функции, файла сценария или выполняемой программы.
+Проверьте правильность написания имени, а также наличие и правильность пути, после чего повторите поп
+ытку.
+строка:1 знак:1
++ .cd LR6
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (.cd:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\ADMIN\Desktop\уч\оп>
+PS C:\Users\ADMIN\Desktop\уч\оп> cd LR6
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git log --all
+commit b5851ae5dbeb29ed3e48ded30d59a1af0f535dfe (HEAD -> master, origin/master, origin/HEAD)
+Author: emlana <117486726+emlana@users.noreply.github.com>
+Date:   Sat Nov 5 01:43:55 2022 +0300
+
+    Create omg
+
+commit 921f53b8d0cebf542c791cf31f04e9b792f385a4
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 20:09:49 2020 +0300
+
+    Обновление информации
+
+commit 0f9f50db68a6983b47398017545532cd0f992846 (origin/branch1)
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 20:08:33 2020 +0300
+
+    Заполнил файл
+
+commit c08a654a63cfc3a7146b2b7015884d9020f5cbf5
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 20:02:16 2020 +0300
+
+    Файл создан пустым
+
+commit 3c6e9131bb47ed6009c28226afb0535c7f6d5964
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 19:58:20 2020 +0300
+
+    Initial commit
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> touch test.txt
+touch : Имя "touch" не распознано как имя командлета, функции, файла сценария или выполняемой програм
+мы. Проверьте правильность написания имени, а также наличие и правильность пути, после чего повторите
+ попытку.
+строка:1 знак:1
++ touch test.txt
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> % touch test.txt
+% : Невозможно вызвать метод для выражения со значением NULL.
+строка:1 знак:1
++ % touch test.txt
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:PSObject) [ForEach-Object], PSArgumentException
+    + FullyQualifiedErrorId : InvokeMethodOnNull,Microsoft.PowerShell.Commands.ForEachObjectCommand
+
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add text.txt
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m "mda"
+[master 6331c8d] mda
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text.txt
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git puch https://github.com/emlana/LR6
+git: 'puch' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push https://github.com/emlana/LR6
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 95.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/emlana/LR6
+   b5851ae..6331c8d  master -> master
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push https://github.com/emlana/LR6
+Everything up-to-date
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git checkout branch1
+Switched to a new branch 'branch1'
+branch 'branch1' set up to track 'origin/branch1'.
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git branch -a
+  branch1
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/branch1
+  remotes/origin/master
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git merge branch1
+Auto-merging mergefile.txt
+CONFLICT (content): Merge conflict in mergefile.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add mergefile.txt
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m "decided"
+[master 3dd0ef4] decided
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git branch -d branch1
+Deleted branch branch1 (was 0f9f50d).
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/branch1
+  remotes/origin/master
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push -d origin/branch1
+fatal: --delete doesn't make sense without any refs
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push origin -d branch1
+To https://github.com/emlana/LR6
+ - [deleted]         branch1
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add '.\other text.txt'
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add other text.txt
+fatal: pathspec 'other' did not match any files
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m
+error: switch `m' requires a value
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m "for delete"
+[master 4aad05e] for delete
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 other text.txt
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git log --graph
+* commit 4aad05e34c8c4ab7c3171e4b9d426a492f11071b (HEAD -> master)
+| Author: 4116 Спицина С.В <furlay-ko@yandex.ru>
+| Date:   Sat Nov 5 21:34:29 2022 +0300
+|
+|     for delete
+|
+*   commit 3dd0ef4a2ab5e3a8b1f84125dd30166c51e1c0bc
+|\  Merge: 6331c8d 0f9f50d
+| | Author: 4116 Спицина С.В <furlay-ko@yandex.ru>
+| | Date:   Sat Nov 5 21:28:22 2022 +0300
+| |
+| |     decided
+| |
+| * commit 0f9f50db68a6983b47398017545532cd0f992846
+| | Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+| | Date:   Sat Nov 21 20:08:33 2020 +0300
+| |
+| |     Заполнил файл
+| |
+* | commit 6331c8d12f5ce96f980150d0ac9c99e72b944f19
+| | Author: 4116 Спицина С.В <furlay-ko@yandex.ru>
+| | Date:   Sat Nov 5 21:11:58 2022 +0300
+| |
+| |     mda
+| |
+* | commit b5851ae5dbeb29ed3e48ded30d59a1af0f535dfe (origin/master, origin/HEAD)
+| | Author: emlana <117486726+emlana@users.noreply.github.com>
+| | Date:   Sat Nov 5 01:43:55 2022 +0300
+| |
+| |     Create omg
+| |
+* | commit 921f53b8d0cebf542c791cf31f04e9b792f385a4
+|/  Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+|   Date:   Sat Nov 21 20:09:49 2020 +0300
+|
+|       Обновление информации
+|
+* commit c08a654a63cfc3a7146b2b7015884d9020f5cbf5
+| Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+| Date:   Sat Nov 21 20:02:16 2020 +0300
+|
+|     Файл создан пустым
+|
+* commit 3c6e9131bb47ed6009c28226afb0535c7f6d5964
+  Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+  Date:   Sat Nov 21 19:58:20 2020 +0300
+
+      Initial commit
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git reset --hard HEAD~
+HEAD is now at 3dd0ef4 decided
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git log
+commit 3dd0ef4a2ab5e3a8b1f84125dd30166c51e1c0bc (HEAD -> master)
+Merge: 6331c8d 0f9f50d
+Author: 4116 Спицина С.В <furlay-ko@yandex.ru>
+Date:   Sat Nov 5 21:28:22 2022 +0300
+
+    decided
+
+commit 6331c8d12f5ce96f980150d0ac9c99e72b944f19
+Author: 4116 Спицина С.В <furlay-ko@yandex.ru>
+Date:   Sat Nov 5 21:11:58 2022 +0300
+
+    mda
+
+commit b5851ae5dbeb29ed3e48ded30d59a1af0f535dfe (origin/master, origin/HEAD)
+Author: emlana <117486726+emlana@users.noreply.github.com>
+Date:   Sat Nov 5 01:43:55 2022 +0300
+
+    Create omg
+
+commit 921f53b8d0cebf542c791cf31f04e9b792f385a4
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 20:09:49 2020 +0300
+
+    Обновление информации
+
+commit 0f9f50db68a6983b47398017545532cd0f992846
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 20:08:33 2020 +0300
+
+    Заполнил файл
+
+commit c08a654a63cfc3a7146b2b7015884d9020f5cbf5
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 20:02:16 2020 +0300
+
+    Файл создан пустым
+
+commit 3c6e9131bb47ed6009c28226afb0535c7f6d5964
+Author: Kurtyanik <45309985+Kurtyanik@users.noreply.github.com>
+Date:   Sat Nov 21 19:58:20 2020 +0300
+
+    Initial commit
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git branch report
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git checkout report
+Switched to branch 'report'
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add .\т1.txt
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add .\х1.txt
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m
+error: switch `m' requires a value
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m "file created"
+[report 5994c81] file created
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 "\321\2021.txt"
+ create mode 100644 "\321\2051.txt"
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6>
+                                  >
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git commit -m
+error: switch `m' requires a value
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git add .\скрин\
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push
+fatal: The current branch report has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin report
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push https://github.com/emlana/LR6/tree/master
+fatal: repository 'https://github.com/emlana/LR6/tree/master/' not found
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> https://github.com/emlana/LR6
+https://github.com/emlana/LR6 : Имя "https://github.com/emlana/LR6" не распознано как имя командлета,
+ функции, файла сценария или выполняемой программы. Проверьте правильность написания имени, а также н
+аличие и правильность пути, после чего повторите попытку.
+строка:1 знак:1
++ https://github.com/emlana/LR6
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (https://github.com/emlana/LR6:String) [], CommandNotF
+   oundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git push https://github.com/emlana/LR6
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 1.44 KiB | 246.00 KiB/s, done.
+Total 11 (delta 3), reused 2 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'report' on GitHub by visiting:
+remote:      https://github.com/emlana/LR6/pull/new/report
+remote:
+To https://github.com/emlana/LR6
+ * [new branch]      report -> report
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git branch master
+fatal: a branch named 'master' already exists
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git checkout master
+Switched to branch 'master'
+A       "\321\201\320\272\321\200\320\270\320\275/1.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/2.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/3.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/4.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/5.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/6.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/7.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/8.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/9.jpg"
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 1
+Unpacking objects: 100% (7/7), 96.18 KiB | 920.00 KiB/s, done.
+From https://github.com/emlana/LR6
+   b5851ae..ea29be2  master     -> origin/master
+ * [new branch]      report     -> origin/report
+error: Your local changes to the following files would be overwritten by merge:
+  скрин/1.jpg скрин/2.jpg скрин/3.jpg скрин/4.jpg скрин/5.jpg скрин/6.jpg скрин/7.jpg скрин/8.jpg скрин/9.jpg
+Merge with strategy ort failed.
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git checkout report
+Switched to branch 'report'
+A       "\321\201\320\272\321\200\320\270\320\275/1.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/2.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/3.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/4.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/5.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/6.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/7.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/8.jpg"
+A       "\321\201\320\272\321\200\320\270\320\275/9.jpg"
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6> git log --pretty=format:"%h - %an, %ar : %s"
+5994c81 - 4116 Спицина С.В, 61 minutes ago : file created
+3dd0ef4 - 4116 Спицина С.В, 73 minutes ago : decided
+6331c8d - 4116 Спицина С.В, 89 minutes ago : mda
+b5851ae - emlana, 21 hours ago : Create omg
+921f53b - Kurtyanik, 1 year, 11 months ago : Обновление информации
+0f9f50d - Kurtyanik, 1 year, 11 months ago : Заполнил файл
+c08a654 - Kurtyanik, 1 year, 11 months ago : Файл создан пустым
+3c6e913 - Kurtyanik, 1 year, 11 months ago : Initial commit
+PS C:\Users\ADMIN\Desktop\уч\оп\LR6>

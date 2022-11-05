@@ -1,0 +1,47 @@
+1 git clone https://github.com/emlana/LR6
+   2 git config user.name "4116 Спицина С.В."
+   3 git log --all
+   4 .cd LR6
+   5 cd LR6
+   6 git log --all
+   7 touch test.txt
+   8 % touch test.txt
+   9 git add text.txt
+  10 git commit -m "mda"
+  11 git puch https://github.com/emlana/LR6
+  12 git push https://github.com/emlana/LR6
+  13 git push https://github.com/emlana/LR6
+  14 git checkout branch1
+  15 git checkout master
+  16 git branch -a
+  17 git merge branch1
+  18 git add mergefile.txt
+  19 git commit -m "decided"
+  20 git branch -d branch1
+  21 git branch -a
+  22 git push -d origin/branch1
+  23 git push origin -d branch1
+  24 git add '.\other text.txt'
+  25 git add other text.txt
+  26 git commit -m
+  27 git commit -m "for delete"
+  28 git log --graph
+  29 git reset --hard HEAD~
+  30 git log
+  31 git branch report
+  32 git checkout report
+  33 git add .\т1.txt
+  34 git add .\х1.txt
+  35 git commit -m
+  36 git commit -m "file created"
+  37 git commit -m
+  38 git add .\скрин\
+  39 git push
+  40 git push https://github.com/emlana/LR6/tree/master
+  41 https://github.com/emlana/LR6
+  42 git push https://github.com/emlana/LR6
+  43 git branch master
+  44 git checkout master
+  45 git pull
+  46 git checkout report
+  47 git log --pretty=format:"%h - %an, %ar : %s"
